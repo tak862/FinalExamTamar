@@ -1,50 +1,69 @@
-FinalExamTamar - Movie List Android App with Firebase
+FinalExamTamar - Movie App with Firebase and SQLite
 
-FinalExamTamar is an Android application developed using Kotlin. The app includes user authentication using Firebase and provides a structured navigation flow with multiple fragments. Users can register, log in, reset their password, and navigate between different parts of the app through a bottom navigation bar. Main features include a movie list on the home screen, a favorites section, a profile page, and the ability to add a new movie.
+FinalExamTamar is an Android application developed using Kotlin and based on a single-activity architecture with Jetpack’s Navigation Component. The app features user authentication with Firebase, local data persistence using SQLite (via SQLiteOpenHelper), and structured navigation via BottomNavigationView. It allows users to register, log in, reset their passwords, and manage a personal movie list, including favorites and custom-added films.
+
+Features
+
+Firebase Authentication: Sign Up, Sign In, Password Reset, Logout
+
+SQLite local database support via SQLiteOpenHelper
+
+Bottom navigation between Home, Favorites, Profile
+
+Add movie functionality with local persistence
+
+Profile screen with logout option
+
+Fragment-to-fragment data passing using Safe Args
+
+Material Design UI components with responsive layouts
+
+ViewBinding and ConstraintLayout for UI management
+
+Jetpack Navigation Component for structured navigation
 
 Technologies Used
 
 Kotlin
+
 Firebase Authentication
+
+SQLiteOpenHelper
+
 Jetpack Navigation Component
+
 ViewBinding
-ConstraintLayout
+
 BottomNavigationView
-Material Design Components
 
-Features
+ConstraintLayout
 
-User login, registration, and logout using Firebase Authentication
-
-Password reset functionality via email
-
-Bottom navigation bar with Home, Favorites, and Profile sections
-
-Ability to add a new movie through a dedicated screen
-
-Navigation between fragments using Jetpack's Navigation Component
-
-Bottom navigation hidden on login/register/reset screens for clarity
-
-Responsive and modern UI with Material Design principles
+Material Design
 
 Setup Instructions
 
-Clone the repository and open it in Android Studio
+Open the project in Android Studio.
 
-Add your google-services.json file to the app/ directory
+Add your Firebase google-services.json file to the app/ directory.
 
-Make sure Internet permission is declared in AndroidManifest.xml
+Enable Firebase Authentication (Email/Password) in the Firebase Console.
 
-Enable Firebase Email/Password Authentication in the Firebase Console
+Make sure the app has internet permission in the AndroidManifest.xml:
+<uses-permission android:name="android.permission.INTERNET" />
 
-Sync Gradle and run the app on an emulator or real device with internet access
+Sync Gradle and run the app on an emulator or real device.
 
 Notes
 
-Firebase Authentication handles secure user sessions.
-Bottom navigation is contextually shown or hidden depending on the active screen.
-All navigation is handled within a single activity using a NavHostFragment.
+All authentication features (register, login, reset) are handled via Firebase.
+
+Movie data added or favorited by the user is stored locally using SQLite.
+
+The app uses a single activity (MainActivity) with fragments for each screen.
+
+Navigation and UI management follow best practices using Jetpack and Material Design.
+
+Network access is required for Firebase features.
 
 Author: Tamar
-Project: Final Exam – Android Movie App with Firebase Authentication
+Project: Final Exam – Android Movie App
