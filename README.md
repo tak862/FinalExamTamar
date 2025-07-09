@@ -1,6 +1,11 @@
 FinalExameTamar - Android Movie App
 Description:
 FinalExameTamar is an Android application for managing movies. It features user authentication with Firebase, local data storage with SQLite, smooth navigation with Navigation Component and BottomNavigationView, background tasks via WorkManager, and rich UI animations.
+![Screenshot 2025-07-09 141635](https://github.com/user-attachments/assets/39df5380-3558-4947-b782-f19ff6603a7a)
+![Screenshot 2025-07-09 141643](https://github.com/user-attachments/assets/a116dd88-57f2-4dca-9c07-f81ad2c8534c)
+![Screenshot 2025-07-09 141659](https://github.com/user-attachments/assets/85cf1fd3-3413-4a7d-a251-c3583a4898ae)
+![Screenshot 2025-07-09 141707](https://github.com/user-attachments/assets/7e075e64-ce77-415c-85e1-a0f03526fed1)
+![Screenshot 2025-07-09 141649](https://github.com/user-attachments/assets/8d2aa8c4-4869-47dc-b3d6-6fe7b4d25e8c)
 
 Features
 User Authentication:
