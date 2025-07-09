@@ -51,12 +51,12 @@ class LoginFragment : Fragment() {
         }
 
         resetPasswordButton.setOnClickListener {
-            // გადასვლა პაროლის აღდგენის ფრაგმენტზე
+
             findNavController().navigate(R.id.resetPasswordFragment)
         }
 
         registerButton.setOnClickListener {
-            // გადასვლა რეგისტრაციის ფრაგმენტზე
+
             findNavController().navigate(R.id.registerFragment)
         }
 

@@ -32,7 +32,7 @@ class SendNotificationWorker(appContext: Context, workerParams: WorkerParameters
         val notification = NotificationCompat.Builder(applicationContext, notificationChannelId)
             .setContentTitle(title)
             .setContentText(message)
-            .setSmallIcon(R.drawable.ic_movie)  // Change to an appropriate icon
+            .setSmallIcon(R.drawable.ic_movie)
             .setAutoCancel(true)
             .build()
 

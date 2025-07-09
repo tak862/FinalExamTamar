@@ -1,66 +1,83 @@
-FinalExamTamar - Movie List Android App
+FinalExameTamar - Android Movie App
+Description:
+FinalExameTamar is an Android application for managing movies. It features user authentication with Firebase, local data storage with SQLite, smooth navigation with Navigation Component and BottomNavigationView, background tasks via WorkManager, and rich UI animations.
+![Screenshot 2025-07-09 141635](https://github.com/user-attachments/assets/39df5380-3558-4947-b782-f19ff6603a7a)
+![Screenshot 2025-07-09 141643](https://github.com/user-attachments/assets/a116dd88-57f2-4dca-9c07-f81ad2c8534c)
+![Screenshot 2025-07-09 141659](https://github.com/user-attachments/assets/85cf1fd3-3413-4a7d-a251-c3583a4898ae)
+![Screenshot 2025-07-09 141707](https://github.com/user-attachments/assets/7e075e64-ce77-415c-85e1-a0f03526fed1)
+![Screenshot 2025-07-09 141649](https://github.com/user-attachments/assets/8d2aa8c4-4869-47dc-b3d6-6fe7b4d25e8c)
 
-FinalExamT is an Android application that fetches and displays a list of movies from a remote API using Retrofit. Movie images are efficiently loaded with Picasso. Users can tap on any movie item to view detailed information on a separate screen (AboutActivity). The app also supports swipe gestures on movie items, allowing users to add movies to their favorites or delete them from the list, with immediate visual feedback via Snackbar. Additionally, Firebase is integrated to provide user authentication.
+Features
+User Authentication:
+Sign in, register, and reset password with Firebase Authentication.
+
+Movie List:
+Displays a list of movies using RecyclerView with images, release year, duration, and country.
+
+Add Movie:
+Add new movies with details such as name, description, release year, duration, country, and image URL.
+
+Favorites Management:
+Mark movies as favorites and view them in a dedicated favorites screen.
+
+Navigation:
+Single Activity architecture using Navigation Component combined with BottomNavigationView for easy navigation between Home, Favorites, and Profile.
+
+Animations:
+Smooth transitions with slide, fade, and scale animations on fragment navigation.
+
+Local Data Storage:
+Uses SQLiteOpenHelper for storing favorite movies locally (Room is not used).
+
+Background Tasks:
+Scheduled background notifications handled by WorkManager.
 
 Technologies Used
 Kotlin
 
-AndroidX RecyclerView
-
-Retrofit 2
-
-Picasso
+Android Jetpack: Navigation Component, ViewBinding, RecyclerView, WorkManager
 
 Firebase Authentication
 
-Material Design Snackbar
+SQLiteOpenHelper for local database
 
-ConstraintLayout & LinearLayout
+Glide for image loading
 
-Features
-Dynamically fetches movie list data from a REST API.
+Retrofit & OkHttp for network calls
 
-Displays movie images and details in a RecyclerView.
-
-Opens a detail screen with extended movie information when a movie item is tapped.
-
-Supports swipe gestures to add movies to favorites or delete them from the list, providing smooth and immediate user feedback.
-
-Uses Firebase Authentication to manage user login and secure access.
-
-(Optional) Supports pagination for infinite scrolling through the movie list.
+Material Design Components (BottomNavigationView, FloatingActionButton)
 
 Setup Instructions
 Clone the repository:
 
 bash
-Copy
-Edit
-git clone https://github.com/tak862/FinalExamTamar.git
+Copy code
+git clone https://github.com/tak862/FinalExameTamar.git
 Open the project in Android Studio.
 
-Make sure the app has internet permission in the AndroidManifest.xml:
+Add your Firebase configuration file (google-services.json).
 
-xml
-Copy
-Edit
-<uses-permission android:name="android.permission.INTERNET" />
-Verify all required dependencies (Retrofit, Picasso, Firebase Authentication, Material Components, etc.) are included in your build.gradle.
+Configure authentication and database rules on Firebase console as needed.
 
-Confirm that the API base URL and endpoints are correctly set up in your Retrofit client and service interface.
+Build and run the app on your device or emulator.
 
-Set up Firebase Authentication in your Firebase console and add the google-services.json file to your project.
+Usage
+Use the login screen to sign in or register a new account.
 
-Run the app on an emulator or physical device.
+Browse movies on the Home screen.
+
+Add new movies using the Add Movie screen.
+
+Mark movies as favorites and view them on the Favorites screen.
+
+Manage your account in the Profile screen including logout.
 
 Notes
-Movie image URLs must be valid and accessible over the internet to load properly.
+Local data persistence uses SQLiteOpenHelper, not Room.
 
-If images fail to load, check internet permissions and URL correctness.
+The app uses Single Activity Architecture for better performance and maintainability.
 
-Swipe gestures allow users to quickly delete movies or add them to favorites, with instant feedback via Snackbar.
+Navigation between screens is handled by the Navigation Component with animated transitions.
 
-Firebase Authentication ensures secure user login and personalized experience.
-
-Author: Tamar
-Project: Final Exam - Android Application
+Author
+Tako Chinchaladze
