@@ -1,69 +1,78 @@
-FinalExamTamar - Movie App with Firebase and SQLite
-
-FinalExamTamar is an Android application developed using Kotlin and based on a single-activity architecture with Jetpack’s Navigation Component. The app features user authentication with Firebase, local data persistence using SQLite (via SQLiteOpenHelper), and structured navigation via BottomNavigationView. It allows users to register, log in, reset their passwords, and manage a personal movie list, including favorites and custom-added films.
+FinalExameTamar - Android Movie App
+Description:
+FinalExameTamar is an Android application for managing movies. It features user authentication with Firebase, local data storage with SQLite, smooth navigation with Navigation Component and BottomNavigationView, background tasks via WorkManager, and rich UI animations.
 
 Features
+User Authentication:
+Sign in, register, and reset password with Firebase Authentication.
 
-Firebase Authentication: Sign Up, Sign In, Password Reset, Logout
+Movie List:
+Displays a list of movies using RecyclerView with images, release year, duration, and country.
 
-SQLite local database support via SQLiteOpenHelper
+Add Movie:
+Add new movies with details such as name, description, release year, duration, country, and image URL.
 
-Bottom navigation between Home, Favorites, Profile
+Favorites Management:
+Mark movies as favorites and view them in a dedicated favorites screen.
 
-Add movie functionality with local persistence
+Navigation:
+Single Activity architecture using Navigation Component combined with BottomNavigationView for easy navigation between Home, Favorites, and Profile.
 
-Profile screen with logout option
+Animations:
+Smooth transitions with slide, fade, and scale animations on fragment navigation.
 
-Fragment-to-fragment data passing using Safe Args
+Local Data Storage:
+Uses SQLiteOpenHelper for storing favorite movies locally (Room is not used).
 
-Material Design UI components with responsive layouts
-
-ViewBinding and ConstraintLayout for UI management
-
-Jetpack Navigation Component for structured navigation
+Background Tasks:
+Scheduled background notifications handled by WorkManager.
 
 Technologies Used
-
 Kotlin
+
+Android Jetpack: Navigation Component, ViewBinding, RecyclerView, WorkManager
 
 Firebase Authentication
 
-SQLiteOpenHelper
+SQLiteOpenHelper for local database
 
-Jetpack Navigation Component
+Glide for image loading
 
-ViewBinding
+Retrofit & OkHttp for network calls
 
-BottomNavigationView
-
-ConstraintLayout
-
-Material Design
+Material Design Components (BottomNavigationView, FloatingActionButton)
 
 Setup Instructions
+Clone the repository:
 
+bash
+Copy code
+git clone https://github.com/tak862/FinalExameTamar.git
 Open the project in Android Studio.
 
-Add your Firebase google-services.json file to the app/ directory.
+Add your Firebase configuration file (google-services.json).
 
-Enable Firebase Authentication (Email/Password) in the Firebase Console.
+Configure authentication and database rules on Firebase console as needed.
 
-Make sure the app has internet permission in the AndroidManifest.xml:
-<uses-permission android:name="android.permission.INTERNET" />
+Build and run the app on your device or emulator.
 
-Sync Gradle and run the app on an emulator or real device.
+Usage
+Use the login screen to sign in or register a new account.
+
+Browse movies on the Home screen.
+
+Add new movies using the Add Movie screen.
+
+Mark movies as favorites and view them on the Favorites screen.
+
+Manage your account in the Profile screen including logout.
 
 Notes
+Local data persistence uses SQLiteOpenHelper, not Room.
 
-All authentication features (register, login, reset) are handled via Firebase.
+The app uses Single Activity Architecture for better performance and maintainability.
 
-Movie data added or favorited by the user is stored locally using SQLite.
+Navigation between screens is handled by the Navigation Component with animated transitions.
 
-The app uses a single activity (MainActivity) with fragments for each screen.
-
-Navigation and UI management follow best practices using Jetpack and Material Design.
-
-Network access is required for Firebase features.
-
-Author: Tamar
-Project: Final Exam – Android Movie App
+Author
+Tako Chinchaladze
